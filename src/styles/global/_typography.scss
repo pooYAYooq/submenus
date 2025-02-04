@@ -1,0 +1,54 @@
+/* Balance text wrapping and line height on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance; // Not supported in all browsers (remove if needed)
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--headingFont);
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+
+/* title */
+
+.title {
+  text-align: center;
+}
+
+.title-underline {
+  background: var(--primary-500);
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
