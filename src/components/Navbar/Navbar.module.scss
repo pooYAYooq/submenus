@@ -1,0 +1,35 @@
+.nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navCenter {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.toggleBtn {
+  width: 2rem;
+  height: 2rem;
+  background: var(--white);
+  color: var(--primary-700);
+  border-radius: var(--borderRadius);
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

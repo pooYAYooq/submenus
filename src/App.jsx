@@ -1,8 +1,13 @@
+import { Navbar, Hero, Sidebar, Submenu } from './components';
+
 function App() {
   return (
-    <>
-      <h1>Submenus Project</h1>
-    </>
+    <main>
+      <Navbar />
+      <Hero />
+      <Sidebar />
+      <Submenu />
+    </main>
   );
 }
 

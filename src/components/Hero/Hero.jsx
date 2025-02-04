@@ -1,7 +1,7 @@
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <h2>Hero</h2>
   )
 }
 export default Hero
