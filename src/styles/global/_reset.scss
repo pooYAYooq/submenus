@@ -42,7 +42,8 @@ label {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+video {
   display: block;
   max-width: 100%;
   object-fit: cover;

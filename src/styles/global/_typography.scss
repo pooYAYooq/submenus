@@ -1,8 +1,20 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
 /* Balance text wrapping and line height on headings */
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   text-wrap: balance; // Not supported in all browsers (remove if needed)
   line-height: 1.1;
 }
@@ -11,7 +23,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: var(--headingFont);
   font-weight: 400;
   text-transform: capitalize;
