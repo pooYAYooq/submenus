@@ -7,7 +7,11 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navCenter}>
-        <h3 className={styles.logo}>submenu</h3>
+        <h3>
+          <a href="#" className={styles.logo}>
+            submenu
+          </a>
+        </h3>
         <button className={styles.toggleBtn} onClick={openSidebar}>
           <FaBars />
         </button>

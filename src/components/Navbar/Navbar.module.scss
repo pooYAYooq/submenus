@@ -17,9 +17,13 @@
   color: var(--white);
   letter-spacing: 2px;
   font-weight: 700;
+  user-select: none;
+  cursor: pointer;
 }
 
 .toggleBtn {
+  display: grid;
+  place-items: center;
   width: 2rem;
   height: 2rem;
   background: var(--white);
@@ -28,6 +32,11 @@
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
 
   &:hover {
     transform: scale(1.05);
