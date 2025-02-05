@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className={styles.navCenter}>
         <h3>
           <a href="#" className={styles.logo}>
-            submenu
+            strapi
           </a>
         </h3>
         <button className={styles.toggleBtn} onClick={openSidebar}>
