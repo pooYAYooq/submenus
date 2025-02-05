@@ -1,3 +1,5 @@
+@use '../../styles/abstracts/' as *;
+
 .nav {
   height: 5rem;
   display: flex;
@@ -39,5 +41,11 @@
 
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+@include breakpoint(medium) {
+  .toggleBtn {
+    display: none;
   }
 }

@@ -1,0 +1,40 @@
+@use '../../styles/abstracts/' as *;
+
+.heroContainer {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+}
+
+.heroCenter {
+  color: var(--white);
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+
+  h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+@include breakpoint(medium) {
+  .heroCenter {
+    text-align: center;
+
+    h1 {
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+      max-width: 35em;
+      margin: 0 auto;
+    }
+  }
+}
