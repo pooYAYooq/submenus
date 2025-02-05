@@ -1,3 +1,8 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 p,
 h1,
 h2,
@@ -15,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-wrap: balance; // Not supported in all browsers (remove if needed)
+  // text-wrap: balance; // Not supported in all browsers (remove if needed)
   line-height: 1.1;
 }
 
