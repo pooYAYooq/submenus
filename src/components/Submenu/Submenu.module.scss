@@ -1,0 +1,59 @@
+@use '../../styles/abstracts/mixins' as *;
+
+
+.submenu {
+  display: none;
+}
+
+
+
+
+@include breakpoint(medium) {
+  .submenu {
+    display: block;
+    position: fixed;
+    top: 6rem;
+    left: 50%;
+    width: var(--fluid-width);
+    max-width: var(--max-with);
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--borderRadius);
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top;
+    perspective: 1000px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 300ms ease-in-out, opacity 200ms ease-in-out;
+
+    & h5 {
+      margin-bottom: 1rem;
+      color: var(--primary-700);
+
+    }
+  }
+
+  .submenuLinks {
+    display: grid;
+    gap: 0.5rem;
+
+    & a {
+      display: block;
+      color: var(--grey-900);
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    & svg {
+      color: var(--grey-500);
+    }
+  }
+
+  .showSubmenu {
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg) translateX(-50%);
+  }
+}
