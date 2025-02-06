@@ -12,13 +12,15 @@
   max-width: var(--max-width);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   color: var(--white);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-weight: 700;
   user-select: none;
+  text-transform: none;
   cursor: pointer;
 }
 
@@ -60,6 +62,7 @@
   }
 
   .navCenter {
+    align-self: stretch;
     display: grid;
     grid-template-columns: auto 1fr;
   }
@@ -67,12 +70,13 @@
   .navLinks {
     display: flex;
     justify-content: center;
-    align-items: end;
     gap: 2rem;
+    align-self: stretch;
   }
 
   .navLink {
     padding: 0 1rem;
+    padding-top: 0.7rem;
     color: var(--white);
     background: transparent;
     border-color: transparent;
@@ -80,5 +84,10 @@
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
     cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: var(--grey-200);
+    }
   }
 }
