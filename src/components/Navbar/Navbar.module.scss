@@ -44,8 +44,41 @@
   }
 }
 
+
+
+
+/* NavLinks styles*/
+
+.navLinks {
+  display: none;
+}
+
+
 @include breakpoint(medium) {
   .toggleBtn {
     display: none;
+  }
+
+  .navCenter {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+  }
+
+  .navLink {
+    padding: 0 1rem;
+    color: var(--white);
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+    cursor: pointer;
   }
 }
