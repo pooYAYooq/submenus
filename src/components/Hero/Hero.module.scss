@@ -1,4 +1,4 @@
-@use '../../styles/abstracts/' as *;
+@use '../../styles/abstracts/mixins' as *;
 
 .heroContainer {
   min-height: calc(100vh - 5rem);
