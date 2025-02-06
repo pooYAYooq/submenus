@@ -2,17 +2,14 @@ import { FaTimes } from 'react-icons/fa';
 import sublinks from '../../data';
 import { useGlobalContext } from '../../context';
 import styles from './Sidebar.module.scss';
+import clsx from 'clsx';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
   return (
     <aside
-      className={
-        isSidebarOpen
-          ? `${styles.sidebar} ${styles.showSidebar}`
-          : styles.sidebar
-      }
+      className={clsx(styles.sidebar, { [styles.showSidebar]: isSidebarOpen })}
     >
       <div className={styles.sidebarContainer}>
         <button className={styles.closeBtn} onClick={closeSidebar}>
