@@ -1,17 +1,29 @@
+import { useRef } from 'react';
 import { useGlobalContext } from '../../context';
 import sublinks from '../../data';
 import styles from './Submenu.module.scss';
 import clsx from 'clsx';
 
 const Submenu = () => {
-  const { pageId } = useGlobalContext();
+  const { pageId, setPageId } = useGlobalContext();
   const currentPage = sublinks.find((item) => item.pageId === pageId);
 
-  // console.log('currentPage:', currentPage?.page);
-  // console.log('currentPage?.links?.length:', currentPage?.links?.length > 3);
+  const submenuContainer = useRef(null);
+
+  const handleMouseLeave = (e) => {
+    const submenu = submenuContainer.current;
+    const { left, right, bottom } = submenu.getBoundingClientRect();
+    const { clientX, clientY } = e;
+    // subtract 1px from left, right and bottom to account for mouse movements in slow screen refresh rate
+    if (clientX < left - 1 || clientX > right - 1 || clientY > bottom - 1) {
+      setPageId(null);
+    }
+  };
 
   return (
     <div
+      onMouseLeave={handleMouseLeave}
+      ref={submenuContainer}
       className={clsx(styles.submenu, { [styles.showSubmenu]: currentPage })}
     >
       <h5>{currentPage?.page}</h5>

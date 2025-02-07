@@ -70,13 +70,12 @@
   .navLinks {
     display: flex;
     justify-content: center;
-    gap: 2rem;
     align-self: stretch;
   }
 
   .navLink {
-    padding: 0 1rem;
-    padding-top: 0.7rem;
+    padding: 0 2rem;
+    padding-top: 0.2rem;
     color: var(--white);
     background: transparent;
     border-color: transparent;
